@@ -1,27 +1,35 @@
 import './NavBar.css'
-import { AiOutlineSearch } from 'react-icons/ai'
+import { Divide as Hamburger } from 'hamburger-react'
+import {useState} from 'react'
 
 function NavBar() {
 
-
+ const [isOpen, setOpen] = useState('invisible'); 
+ const [animation, setAnimation] = useState('');
 
 
 
 
   return (
 
-    <nav className="navbar text-white flex justify-between hover:border-solid hover:border-slate-50 border-1 w-full p-8">
+    <nav className="navbar text-white flex flex-col md:flex-row items-center justify-between  w-full p-8">
 
-
-      <h1 id="logo" className="text-5xl ">GameNews</h1>
-      <div className='underline-animation'>
-       <input className='bg-black text-white focus:outline-none  p-3' type="text"></input>
+      <div class="flex flex-row">
+        <h1 id="logo" className="text-5xl ">ITSolutions</h1>
+        <span className='ml-28  md:invisible'> <Hamburger onToggle={toggled => {
+          if (toggled) {
+            setOpen('visible')
+            setAnimation('slide-down')
+          } else {
+            setOpen('invisible')
+            setAnimation('')
+          }
+        }}/> </span>
       </div>
-      <div className='flex items-center cursor-pointer'><AiOutlineSearch size='2rem' /> </div>
-      <ul className="navItems flex text-xl justify-around items-center mx-4">
-        <li className=" underline-animation  mx-14" >Categorias</li>
-        <li className="underline-animation  mx-5" >Contactanos</li>
-        <li className="underline-animation  mx-5" >Iniciar Sesion</li>
+      <ul className={`navItems ${animation}  mt-5 flex-col ${isOpen} w-full md:flex-row flex text-l justify-around items-center mx-4`}>
+        <li className=" underline-animation  my-3 mx-14" >Servicios</li>
+        <li className="underline-animation  my-3 mx-5" >Sobre Nosotros</li>
+        <li className="underline-animation  my-3 mx-5" >Contacto</li>
       </ul>
 
 
