@@ -22,11 +22,10 @@ function NavBar() {
             setAnimation('slide-down')
           } else {
             setOpen('invisible')
-            setAnimation('')
           }
         }}/> </span>
       </div>
-      <ul className={`navItems ${animation}  mt-5 flex-col ${isOpen} w-full md:flex-row flex text-l justify-around items-center mx-4`}>
+      <ul className={`navItems ${animation}  md:visible mt-5 flex-col ${isOpen} w-full md:flex-row flex text-l justify-end items-center mx-4`}>
         <li className=" underline-animation  my-3 mx-14" >Servicios</li>
         <li className="underline-animation  my-3 mx-5" >Sobre Nosotros</li>
         <li className="underline-animation  my-3 mx-5" >Contacto</li>
