@@ -13,6 +13,9 @@
   }
 }
 
+.font-face-gm {
+  font-family: 'Qwigley';
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

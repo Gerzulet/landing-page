@@ -5,9 +5,13 @@
 
 
 @font-face {
-  font-family : 'khurasan'; 
-  src: local('khurasan'), url(./fonts/khurasan/khurasan.ttf), format('truetype')
+  font-family : 'Qwigley'; 
+  src: local('Qwigley-Regular'), url("./fonts/Qwigley-Regular.ttf") format('truetype');
+    }
 
+@font-face {
+  font-family : 'Goblin'; 
+  src: local('Goblin-One'), url("./fonts/GoblinOne-Regular.ttf") format('truetype');
     }
 
 

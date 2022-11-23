@@ -1,13 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 
-
-.navbar {
-  border-color: white; 
-  border-width: 3px;
-}
 
 
 #logo {
-
-  font-family: Khurasan, serif;
-
+      font-family: Qwigley, serif;
     }
+
+
+.navItems {
+  font-family:  'Aldrich', sans-serif;
+}
+
+.underline-animation {
+  font-family:  'Aldrich', sans-serif;
+  background-color: black;
+  position: relative; 
+}
+
+.underline-animation::after {
+  content:''; 
+  position:absolute; 
+  width:100%; 
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  top: 1;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform:scaleX(1); 
+  transform-origin: bottom left;
+}
+
+
