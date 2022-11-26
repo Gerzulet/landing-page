@@ -4,7 +4,7 @@ import {useState} from 'react'
 
 function NavBar() {
 
- const [isOpen, setOpen] = useState('invisible'); 
+ const [isOpen, setOpen] = useState('hidden'); 
  const [animation, setAnimation] = useState('');
 
 
@@ -21,11 +21,16 @@ function NavBar() {
             setOpen('visible')
             setAnimation('slide-down')
           } else {
-            setOpen('invisible')
+            setOpen('hidden')
           }
         }}/> </span>
       </div>
-      <ul className={`navItems ${animation}  md:visible mt-5 flex-col ${isOpen} w-full md:flex-row flex text-l justify-end items-center mx-4`}>
+      <ul className={`navItems ${animation}   mt-5 flex-col ${isOpen} md:invisible w-full md:flex-row flex text-l justify-end items-center mx-4 z-40`}>
+        <li className=" underline-animation  my-3 mx-14" >Servicios</li>
+        <li className="underline-animation  my-3 mx-5" >Sobre Nosotros</li>
+        <li className="underline-animation  my-3 mx-5" >Contacto</li>
+      </ul>
+        <ul className={`navItems invisible flex md:visible w-full md:flex-row text-l justify-end items-center mx-4 z-40`}>
         <li className=" underline-animation  my-3 mx-14" >Servicios</li>
         <li className="underline-animation  my-3 mx-5" >Sobre Nosotros</li>
         <li className="underline-animation  my-3 mx-5" >Contacto</li>
