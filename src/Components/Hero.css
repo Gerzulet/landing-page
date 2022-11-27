@@ -9,3 +9,11 @@
 .heroImage {
   font-family: Aldrich;
 }
+
+.gradient {
+background: #F7F7F7;
+background: linear-gradient(to right, #F7F7F7 0%, #FFFF00 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
