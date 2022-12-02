@@ -4,6 +4,7 @@ import Hero from './Components/Hero'
 import Purpose from './Components/Purpose';
 import Testimonies from './Components/Testimonies';
 import Form from './Components/Form';
+import Footer from './Components/Footer';
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
     <Purpose/>
     <Testimonies/>
     <Form/>
+    <Footer/>
 
 
 
