@@ -1,15 +1,17 @@
 import './Form.css'
+import puzzleImg from '../Assets/puzzle.png'
 import { useState } from 'react'
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 export default function Form() {
 
-const [isActivated, activate] = useState(false)
+  const [isActivated, activate] = useState(false)
 
   function responseMessage(event) {
     event.preventDefault()
     activate(true)
     setTimeout(() => {
-     activate(false) 
+      activate(false)
     }, 3000);
     document.getElementById(("form")).reset()
   }
@@ -28,14 +30,21 @@ const [isActivated, activate] = useState(false)
           <button className="my-10 bg-yellow-500 text-black hover:bg-yellow-300 p-2 rounded-full">Enviar!</button>
         </form>
         <div className="respuestaForm">
-          {isActivated ? <div className='md:my-[16rem] m-24 md:ml-42 text-2xl '>
-            <h2 >Tu mail ha sido enviado! </h2>
-            <h3  >Estaremos contactandote pronto!</h3>
-            </div>
+          {isActivated ?
+            
+              Report.info(
+                'Gracias por contactarnos',
+                'Su mensaje ha sido enviado!',
+                'Ok'
+              )
+            
             : null
           }
 
 
+        </div>
+        <div className="text-white invisible md:visible mt-60 ml-16">
+          <img className='h-80' src={puzzleImg} alt="puzzleimage"></img>
         </div>
       </div>
     </>
