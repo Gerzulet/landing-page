@@ -1,5 +1,5 @@
 import './Purpose.css'
-import AstronautCard from '../Assets/astronautCard.jpg'
+
 import ThinkerCard from '../Assets/thinkerCard.jpg'
 import LightBulb from '../Assets/lightbuldCard.jpg'
 function Purpose() {
